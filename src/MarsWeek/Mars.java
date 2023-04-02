@@ -1,9 +1,11 @@
 package MarsWeek;
 
+import FindingsList.FindingsList;
 import GuessingGame.GuessingGame;
+import MarsExpedition.MarsExpedition;
 
 public class Mars {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         String colonyName = "Command Center";
         int shipPopulation = 300;
         double meals = 4000.00;
@@ -23,7 +25,10 @@ public class Mars {
             System.out.println("ERROR!!! Flight plan already set. Landing on the Plain");
         }
         new GuessingGame();
+        new MarsExpedition();
+        new FindingsList();
     }
+
 
     private static boolean landingCheck(int minutesLeft) throws InterruptedException {
         for (int minute = 0; minute <= minutesLeft; minute++) {
